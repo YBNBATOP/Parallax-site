@@ -1,0 +1,14 @@
+"use strict";
+
+document.addEventListener("DOMContentLoaded", init)
+
+function init() {
+    document.addEventListener("mousemove", e => {
+        Object.assign(document.documentElement, {
+            style: `
+            --move-x: ${e.clientX};
+            --move-y: ${e.clientY};
+            `
+        })
+    })
+}
