@@ -6,6 +6,7 @@
 
 :root {
     --index: calc(1vw + 1vh);
+    --transition: 1.5s cubic-bezier(.05, .5, 0, 1);
 }
 
 @font-face {
@@ -42,8 +43,11 @@ body {
 
 .layers__container {
     height: 100vh;
+    min-height: 500px;
     transform-style: preserve-3d;
     transform: rotateX(var(--move-y)) rotateY(var(--move-x));
+    will-change: transform;
+    transition: transform var(--transition);
 }
 
 .layers__item {
@@ -51,6 +55,9 @@ body {
     inset: -5vw;
     background-size: cover;
     background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .layer-1 {
@@ -75,5 +82,17 @@ body {
 
 .layer-6 {
     transform: translateZ(380px);
+}
+
+.hero-content {
+    font-size: calc(var(--index) * 2.9);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: calc(var(--index) * -0.15);
+    line-height: 1.35em;
+}
+
+.hero-content span {
+    display: block;
 }
 
