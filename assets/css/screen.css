@@ -111,5 +111,17 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     font-size: calc(var(--index) * 0.71);
+    letter-spacing: -0.02vw;
+    padding: calc(var(--index) * 0.7) calc(var(--index) * 0.25);
+    background-color: transparent;
+    color: #fff;
+    border-radius: 10em;
+    border: rgb(255 255 255 / 0.4) 3px solid;
+    outline: none;
+    cursor: pointer;
+}
+
+.layer-4, .layer-5, .layer-6 {
+    pointer-events: none;
 }
 
